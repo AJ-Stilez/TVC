@@ -1,0 +1,349 @@
+body{
+    background-color: #f0f3f7;
+    margin: 0px;
+    padding: 0px;
+    color: black;
+    /* text-align: center; */
+}
+
+.mainBody{
+    margin-bottom: 50px;
+}
+
+h1{
+    font-size: 50px;
+    color: #2434c7;
+    text-shadow: 0px 0px 5px #611114;
+    text-align: center;
+}
+
+.bibleContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+
+.biblePassageForm{
+    background-color: white;
+    /* border: 1px solid blue; */
+    box-shadow: 0px 0px 5px;
+    border-radius: 10px;
+    text-align: center;
+    width: 35%;
+    max-height: 200px;
+    padding: 10px;
+}
+
+label{
+    font-size: 20px;
+    font-weight: 600
+}
+
+input{
+    font-size: 16px;
+    width: 50%;
+    height: 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+input:hover{
+    background-color: hsl(0, 0%, 90%);
+    border-radius: 7px;
+    transition: background-color 0.3s;
+}
+
+input:focus{
+    background-color: hsl(240, 100%, 95%);
+    border-radius: 7px;
+}
+
+#getBook{
+    width: 110px;
+    height: 35px;
+    border-color: #611114;
+    border-radius: 10px;
+    background-color: hsl(240, 100%, 30%);
+    color: white;
+    margin-top: 5px;
+}
+
+#getBook:hover{
+    background-color: hsl(240, 100%, 50%);
+}
+
+#getBook:active{
+    background-color: black;
+}
+
+.bookTitle{
+    display: flex;
+    justify-content: center;
+}
+
+#reference{
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    max-width: 150px;
+    background-color: white;
+    text-align: center;
+}
+
+.passageContainer{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 0px;
+}
+
+#bookName{
+    margin-right: 5px;
+}
+
+#chapterNum{
+    margin-right: -5px;
+}
+
+#verseNum{
+    margin-left: 5px;
+}
+
+.passagTextContainer{
+    font-size: 18px;
+    /* border: 1px solid blue; */
+    background-color: white;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.verses{
+    border: 1px solid blue;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 2px;
+}
+
+.foundPassage{
+    /* font-size: 20px; */
+    font-weight: 600;
+    /* text-align: center; */
+    margin-bottom: 5px;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+#homeNav{
+    color: black;
+    text-decoration: none;
+}
+
+#accountPage{
+    color: black;
+    text-decoration: none;
+}
+
+#bibleLink{
+    color: rgb(91, 40, 8);
+    text-decoration: underline;
+}
+
+.nav-bar2 {
+    display: flex;
+    color: black;
+    background-color: #a3b0e3;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0px 0px 5px;
+    width: 100%;
+    height: 6%;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+    padding: px;
+}
+
+@media (max-width: 480px) {
+    body{
+        background-color: #f0f3f7;
+        margin: 0px;
+        padding: 0px;
+        color: black;
+    }
+    
+    .mainBody{
+        margin-bottom: 60px;
+    }
+    
+    h1{
+        font-size: 35px;
+        color: #2434c7;
+        text-shadow: 0px 0px 5px #611114;
+        text-align: center;
+    }
+    
+    .bibleContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .biblePassageForm{
+        background-color: white;
+        box-shadow: 0px 0px 5px;
+        border-radius: 10px;
+        text-align: center;
+        width: 55%;
+        max-height: 200px;
+        padding: 10px;
+    }
+    
+    label{
+        font-size: 18px;
+        font-weight: 600
+    }
+    
+    input{
+        font-size: 16px;
+        width: 50%;
+        height: 15px;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 5px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    input:hover{
+        background-color: hsl(0, 0%, 90%);
+        border-radius: 7px;
+        transition: background-color 0.3s;
+    }
+    
+    input:focus{
+        background-color: hsl(240, 100%, 95%);
+        border-radius: 7px;
+    }
+    
+    #getBook{
+        width: 110px;
+        height: 35px;
+        border-color: #611114;
+        border-radius: 10px;
+        background-color: hsl(240, 100%, 30%);
+        color: white;
+        margin-top: 5px;
+    }
+    
+    #getBook:hover{
+        background-color: hsl(240, 100%, 50%);
+    }
+    
+    #getBook:active{
+        background-color: black;
+    }
+    
+    .bookTitle{
+        display: flex;
+        justify-content: center;
+    }
+    
+    #reference{
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 10px;
+        padding: 5px;
+        margin-top: 0px;
+        margin-bottom: 10px;
+        max-width: 150px;
+        background-color: white;
+        text-align: center;
+    }
+    
+    .passageContainer{
+        font-size: 12px;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 0px;
+    }
+    
+    #bookName{
+        margin-right: 5px;
+    }
+    
+    #chapterNum{
+        margin-right: -5px;
+    }
+    
+    #verseNum{
+        margin-left: 5px;
+    }
+    
+    .passagTextContainer{
+        font-size: 16px;
+        /* border: 1px solid blue; */
+        background-color: white;
+        border-radius: 10px;
+        text-align: left;
+    }
+    
+    .verses{
+        border: 1px solid blue;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 2px;
+    }
+    
+    .foundPassage{
+        /* font-size: 20px; */
+        font-weight: 600;
+        /* text-align: center; */
+        margin-bottom: 5px;
+    }
+    
+    a{
+        color: black;
+        text-decoration: none;
+    }
+    
+    #homeNav{
+        color: black;
+        text-decoration: none;
+    }
+    
+    #accountPage{
+        color: black;
+        text-decoration: none;
+    }
+    
+    #bibleLink{
+        color: rgb(91, 40, 8);
+        text-decoration: underline;
+    }
+    
+    .nav-bar2 {
+        display: flex;
+        color: black;
+        background-color: #a3b0e3;
+        justify-content: space-evenly;
+        align-items: center;
+        box-shadow: 0px 0px 5px;
+        width: 100%;
+        height: 6%;
+        text-align: center;
+        position: fixed;
+        bottom: 0px;
+        padding: px;
+    }
+    
+}

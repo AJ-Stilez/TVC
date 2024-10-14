@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account</title>
+    <link rel="stylesheet" href="styles/account.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <!-- <h1>Account</h1> -->
+
+    <div class="myProfile">
+        <div class="userDetails">
+            <p id="userName"><i class="fa-solid fa-user"></i> Hi, <%= user %></p>
+            <p id="upgradeText"><i class="fa-solid fa-medal"></i> Upgrade to Premium</p>
+        </div>
+
+        <div class="settingsBtn">
+            <p id="settingsBtn"><i class="fa-solid fa-gear"> </i>Settings</p>
+        </div>
+    </div>
+
+    <div class="bodyContainer">
+
+        <div class="safetyBarContainer">
+            <div class="safetyBar">
+                <div class="safetyText">
+                    <p> <i class="fa-solid fa-triangle-exclamation"></i> 2 Safety Tips</p>
+                    <p>Make your account more secure</p>
+                </div>
+                    <button id="viewBtn">View</button>
+            </div>
+        </div>
+        
+        <div class="safetyList">
+            <ul>
+                <li class="lists">Security notifications</li>
+                <li class="lists">Passkeys</li>
+                <li class="lists">Email address</li>
+                <li class="lists">Two-step verification</li>
+                <li class="lists">Change number</li>
+                <li class="lists">Request account info</li>
+                <li class="lists">Remove account</li>
+                <li class="lists">Delete account</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="nav-bar2">
+        <a href="/dashboard" id="homeNav"><p> Home </p></a>
+        <a href="/bible" id="bibleLink"><p> Bible </p></a>
+        <a href="/plans" id="plansPage"><p> Plans </p></a>
+        <a href="/records" id="recordsPage"><p> Records </p></a>
+        <a href="#"><p id="accountPage"> My account </p></a>
+    </div>
+
+    <script src="script/account.js"></script>
+</body>
+</html>

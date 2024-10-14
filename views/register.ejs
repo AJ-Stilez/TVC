@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="styles/register.css">
+</head>
+<body>
+    
+    <h1>TVC</h1>
+
+    <h3>Create an account with us</h3>
+
+    <form action="/register" method="post" class="registerForm">
+        <!-- <label for="username">Choose a username</label> -->
+        <input type="text" name="username" class="registerFields" id="username" placeholder="Create a username" required autofocus>
+        <!-- <label for="email">Enter your email</label> -->
+        <input type="email" name="email" class="registerFields" id="email" placeholder="Enter your email" required>
+        <!-- <label for="password">Choose a password</label> -->
+        <input type="password" name="password" class="registerFields" id="password" placeholder="Create a password" required>
+        <!-- <label for="confirmPassword">Confirm your password</label> -->
+        <input type="password" name="confirmPassword" class="registerFields" id="confirmPassword" placeholder="Confirm the password" required> <br>
+        <% if(locals.error){ %> 
+            <p id="error"><%= error %></p>
+       <% } %> 
+        <input type="submit" value="Sign Up" id="signUpBtn">
+        <p>Already have an account? <a href="/">Log in</a></p>
+    </form>
+
+    <p>Or</p>
+
+    <form action="/auth/google" method="get">
+        <input type="submit" value="Sign in with Google" id="googleSignIn">
+    </form>
+
+    <script src="register.js"></script>
+</body>
+</html>

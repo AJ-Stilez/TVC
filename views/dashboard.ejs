@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title> Dashboard</title>
+<link rel="stylesheet" href="styles/dashboard.css">
+</head>
+<body>
+
+
+    <a href="/" >
+        <button id="logout"> Log out </button>
+    </a>
+
+          <div class="dashboardContainer">
+            <h1> Welcome, <%= user %> </h1>
+
+            <div class="dashboard">
+                <div class="me">
+                  <% if(locals.picture){ %> 
+                    <img src="<%= picture %>" alt="userProfile">
+                  <% } else { %> 
+                    <img src="../public/assets/Image1.png" alt="userProfile">
+                  <% } %> 
+                  
+                  <p id="account"> Member's account </p>
+                </div>    
+
+              <div class="list">
+                <ul> <li>Upgrade to Premium worker</li> </ul>
+                <ul> <li>Become more devoted</li> </ul>
+                <ul> <li>See scheduled event</li> </ul> 
+                <ul> <li>Create a reminder plan</li> </ul>                      
+              </div>
+              
+            </div>
+          </div>
+          </div>
+
+          
+      <!-- nav-bar1 stands for the navigation bar above-->
+      
+      <div class="nav-bar1">
+            <p class="today" id="today" onclick="showTodayPage()"> Today </p>
+            <p id="churchCommunity"  onclick="showCommunityPage()"> Church community </p>
+      </div>
+
+      <div class="dailyDevotionContainer">
+
+        <div class="todaycontainer">
+          <div id="todayQuote" class="quote">
+            <h3 id="quote">  Quote for today </h3>
+            <p id="power"> <i> The power of thoughtfulness determines the level you are going to get to in life </i></p>
+        </div>
+      
+            <div id="devotionContainer" class="main-text">
+                
+
+                  <div id="devotionHeading" class="devotion-heading">
+                      <h4> Daily devotion </h4>
+                          <p> Time: 2-5 min </p>
+                          <p> Topic: THE POWER OF THOUGHTFULNESS </p>
+                          <p> 📌 Main Text: 2 Corinthians 5:10 </p> 
+                  </div>
+
+
+                          <p> <i> For we must all appear before the judgment seat of Christ, so that each of us may receive what is due us for the things done while in the body, whether good or bad.(AMP) </i></p>
+                          <p>🖊 Body: </p>
+                          
+                      <div id="expandableText">
+                          <p> <i>  The gift of thoughtfulness is not something inherent in all mankind. The reason social vices are on the increase is because carelessness is marauding. Lack of 
+                                thoughtfulness is responsible for extramarital affairs, embezzlement of public and organisational funds, abuse of position and power and etc. Thoughtfulness dives you into
+                                realms where you get extraordinary directions about life and solutions to problems. Judas Iscariot was only focused on the money he would get after betraying Jesus, he never for once thought about
+                                how he was going to handle the guilt nor the killing of an innocent person, he ended up committing two murders, Jesus was crucified and Judas killed himself, (Matthew 27:1-10). The power of 
+                                thoughtfulness determines the level you are going to get to in life. A person that does things rashly lacks thoughtfulness, if you are a kind of person that wants to get thing immediately you 
+                                lack thoughtfulness.  Jesus taught us about being thoughtful, he says in Luke 14:28-30 that  If one of you is planning to build a tower, you sit down first and work out what it will cost, 
+                                to see if you have enough money to finish the job. If you don't, you will not be able to finish the tower after laying the foundation; and all who see what happened will laugh at you. ‘This man began to build but can't finish the job!’ they will say. </p>
+            
+                          <p>   Many people do not do reflective strategic planning, they only execute things at the pulse of the moment and end up being swallowed and ridiculed, there is a thin line between planning and thoughtfulness. The process of thoughtfulness includes searching for leaked pipes,
+                                fixing them and preventing another. Part of being thoughtful is having "Second-thoughts". As a believer you can not live a careless life. Many times the flesh would want to control you to do the things against God, without the Holy Spirit you are going to do them. 
+                                For as many as are led by the Spirit of God they are the children of God, (Romans 8:14). You need second-thoughts when temptations come banging on your minds, think like Jesus, like the Apostles, what would they have done if they found themselves in a situation like yours. 
+                                Joseph in a split-second had the second-thought about the consequence waiting for him  if he had slept with Potiphar's wife, (Genesis 39:1-12).  </p>
+            
+                          <p>   You can not have second-thought without having the word of God engraved in your heart, Proverbs 3:1-2 says my son, do not forget my teaching, but keep my commands in your heart, for they will prolong your life many years and bring you peace and prosperity. Psalm 119:11,
+                                King David wrote your word have I hidden in my heart so that I may not sin against you. If you immerse yourself in the word of God it will help you resist sin.  Lack of thoughtfulness is the elder brother to anger, Proverbs 25:28 says like a city whose walls are broken through
+                                is a person who lacks self-control. When you are thoughtful you would not enter into strange relationships, you will often reflect about your life daily especially when you sleep on the bed. Being thoughtful is so underrated. Anyone could had passed the judgement to punish the woman 
+                                caught committing adultery yet Jesus paused for a moment in order to give a concrete response by saying can the kettle call the pot black, (John 8:1-11). </i></p>
+            
+
+                          <p>   🔑 Charge </p>
+                          <p> <i>  Believers must endeavour to live a thoughtful life, think about the consequence of a decision, statement and action before we do them. Let God direct your path so that you would not go into places that will destroy you, let the word of God be the template
+                                for your speech so that your words would not land you into trouble. </i></p>
+                          <p>   👏 Prayer point </p>
+                          <p> <i>  Lord, I surrender to the direction of your Spirit from today. </i></p>
+                          <p>   📖 Further Reading: </p>
+                          <p>   Luke 15:11-32(Morning)</p>
+                          <p>   Genesis 39:1- 23(Evening) </p>
+                          <p>  <b> He is able, he will surely do it </b></p>
+                  </div>
+                        <div id="expand-button">Read more</div>
+        </div>
+        </div>
+
+        <div class="communityContainer">
+          <div id="communityContainer" class="community">
+            <h3 id="community">  Community groups </h3>
+                <ul> 
+                  <li> Good Men Group (GMG) </li><br>
+                  <li> Good Women Group (GWG) </li><br>
+                  <li> Faithful Youth (FY) </li>  <br>  
+                  <li> Bright Teenagers (BT) </li>     <br>
+                  <li> Children Of God </li>                           
+                </ul>                                   
+        </div>
+        <div id="dailyDevotion" class="daily-devotion">
+          <div class="main-text">
+                  <h4> Weekly Community Meetings </h4>
+                  <p> 
+    </div>
+
+      </div>
+        </div>
+
+        </div>
+                  
+                  
+                  <div class="discover">
+                      <p> Discover ongoing projects </p>
+                  
+                  </div>
+                  
+                  
+                  
+                  <div class="nav-bar2">
+                  <a href="#"><p id="homeNav"> Home </p></a>
+                  <a href="/bible" id="bibleLink"><p> Bible </p></a>
+                  <a href="/plans" id="plansPage"><p> Plans </p></a>
+                  <a href="/records" id="recordsPage"><p> Records </p></a>
+                  <a href="/account" id="accountPage"><p> My account </p></a>
+      
+  
+  
+<script src="script/dashboard.js"></script>
+</body>
+</html>

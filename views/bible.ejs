@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible</title>
+    <link rel="stylesheet" href="styles/bible.css">
+</head>
+<body>
+    <h1>Bible (KJV)</h1>
+    <div class="mainBody">
+        <div class="bibleContainer">
+            <form action="/bible" method="post" class="biblePassageForm">
+                <label for="book">Passage:</label>
+                <input type="text" name="book" id="book" placeholder="Name of book" autofocus required> <br>
+                <label for="chapter">Chapter:</label>
+                <input type="number" name="chapter" id="chapter" placeholder="Chapter" required> <br>
+                <label for="verse">Verse:</label>
+                <input type="number" name="verse" id="verse" placeholder="Verse"> <br>
+                <input type="submit" id="getBook" onclick="bible()" value="Find Passage">
+                   
+                <% if(locals.error){ %>  
+                <div><%= error %></div>
+                <% } %> 
+                <div class="passageContainer">
+                    <span id="bookName"></span><span id="chapterNum"></span> <span id="verseNum"></span>
+                </div>
+            </form>
+        </div>
+    
+        
+        <div class="passageContainer">
+            <span id="bookName"></span><span id="chapterNum"></span> <span id="verseNum"></span>
+        </div>
+    
+        <% if(locals.reference){ %> 
+            <div class="bookTitle">
+                <p id="reference"><%= reference %></p>
+            </div>
+        <% } else if(locals.result){ %> 
+            <div class="bookTitle">
+                <p id="reference"><%= result[0].book_name %></p>
+            </div>
+        <% } %> 
+    
+            <% if(locals.result){ %> 
+                <div class="passagTextContainer">
+                    <% result.forEach(element  => { %> 
+                        <div class="verses">
+                            <div class="foundPassage"> <%= element.book_name %> <%= element.chapter %>:<%= element.verse %></div>
+                            <div><%= element.text %></div>
+                        </div>
+                    <% }) %> 
+                </div>
+            <% } %> 
+    
+            <div class="nav-bar2">
+                <a href="/dashboard" id="homeNav"><p> Home </p></a>
+                <a href="#"><p id="bibleLink"> Bible </p></a>
+                <a href="/plans" id="plansPage"><p> Plans </p></a>
+                <a href="/records" id="recordsPage"><p> Records </p></a>
+                <a href="/account" id="accountPage"><p> My account </p></a>
+            </div>
+    </div>
+
+    <script src="script/bible.js"></script>
+</body>
+</html>

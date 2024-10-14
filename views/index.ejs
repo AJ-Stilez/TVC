@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.00" />
+    <title>TVC</title>
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+
+<body>
+    <form class="language">
+        <select>
+            <option style="color: #2196f3;"> English </option>
+            <option style="color: #e91e63;"> Yoruba </option>
+            <option style="color: #ff0000;"> Igbo </option>
+            <option style="color: #fff; background-color: #2196f3;"> Hausa </option>
+        </select>
+    </form>
+
+    <h1 id="h1"> T.V.C </h1>
+
+        <form action="/login" method="post" class="input-fields">
+            <input type="email" name="username" placeholder="Enter your email" id="userName" class="fields" required>
+            <input type="password" name="password" placeholder="Password" id="passWord" class="fields" required>
+            <input type="submit" value="Log in" id="logIn">
+        </form>
+
+       <% if(locals.error){ %> 
+            <p><%= error %></p>
+        <% } %>
+
+        <p>Or</p>
+
+    <form action="/auth/google" method="get" class="googleDiv">
+        <input type="submit" value="Sign in with Google" id="googleSignIn">
+    </form>
+
+    <div class="NewAct">
+        <form method="get">
+            <button type="submit"  class="NewAct-button" formaction="register">Create new account</button>
+        </form>
+    </div>
+
+    <div class="TVC">
+        <p id="TVC-Text"> T.V.C</p>
+    </div>
+    
+
+<script src="index.js" type="module"></script>
+
+
+    
+
+</body>
+
+</html>

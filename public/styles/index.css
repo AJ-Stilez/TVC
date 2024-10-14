@@ -1,0 +1,266 @@
+body {
+    background-color: #f0f3f7;
+    margin: 0px;
+    padding: 0px;
+    color: #fff;
+    text-align: center;
+}
+
+.language {
+    text-align: center;
+    margin-top: 1%;
+}
+
+h1{
+    font-size: 50px;
+    color: #2434c7;
+    text-shadow: 0px 0px 5px #611114;
+    text-align: center;
+    margin-top: 10%;
+}
+
+.input-fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fields {
+    font-size: 16px;
+    width: 40%;
+    height: 25px;
+    border: 1px solid blue;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.fields:hover{
+    background-color: hsl(0, 0%, 90%);
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.fields:not(:placeholder-shown) {
+    background-color: hsl(240, 100%, 95%);
+    border-radius: 7px;
+}
+
+#logIn{
+    width: 30%;
+    height: 35px;
+    border-color: #611114;
+    border-radius: 10px;
+    background-color: hsl(240, 100%, 30%);
+    color: white;
+    margin-top: 20px;
+}
+
+#logIn:hover{
+    background-color: hsl(240, 100%, 50%);
+}
+
+#logIn:active{
+    background-color: black;
+}
+
+
+p{
+    color:black;
+    font-weight: 600;
+}
+
+#googleSignIn{
+    height: 40px;
+    width: 40%;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px;
+    font-weight: 500;
+    color: blue;
+    background-color: transparent;
+    transition: 0.3s;
+}
+
+#googleSignIn:hover{
+    color: blue;
+    background-color: hsl(240, 100%, 90%);
+}
+
+#googleSignIn:active{
+    color: white;
+    background-color: black;
+}
+
+.NewAct-button {
+    position: fixed;
+    bottom: 60px;
+    left: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 40px;
+    border: 1px solid blue;
+    border-radius: 5px;
+    font-weight: 500;
+    color: black;
+    background-color: white;
+}
+
+.NewAct-button:hover{
+    border-radius: 10px;
+    font-weight: 500;
+    background-color: hsl(0, 0%, 90%);
+}
+
+.NewAct-button:active{
+    color: white;
+    background-color: black;
+}
+
+.TVC{
+    text-align: center;
+    font-weight: bold;
+    color: #2434c7;
+    position: fixed;
+    bottom: 0px;
+    left: 46%;
+}
+
+@media (max-width: 480px) {
+    body {
+        background-color: #f0f3f7;
+        margin: 0px;
+        padding: 0px;
+        color: #fff;
+        text-align: center;
+    }
+    
+    .language {
+        text-align: center;
+        margin-top: 1%;
+    }
+    
+    h1{
+        font-size: 50px;
+        color: #2434c7;
+        text-shadow: 0px 0px 5px #611114;
+        text-align: center;
+        margin-top: 30%;
+    }
+    
+    .input-fields {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .fields {
+        font-size: 16px;
+        width: 60%;
+        height: 25px;
+        border: 1px solid blue;
+        border-radius: 5px;
+        padding: 5px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    
+    .fields:hover{
+        background-color: hsl(0, 0%, 90%);
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+    
+    .fields:not(:placeholder-shown) {
+        background-color: hsl(240, 100%, 95%);
+        border-radius: 7px;
+    }
+    
+    #logIn{
+        width: 40%;
+        height: 35px;
+        border-color: #611114;
+        border-radius: 10px;
+        background-color: hsl(240, 100%, 30%);
+        color: white;
+        margin-top: 20px;
+    }
+    
+    #logIn:hover{
+        background-color: hsl(240, 100%, 50%);
+    }
+    
+    #logIn:active{
+        background-color: black;
+    }
+    
+    
+    p{
+        color:black;
+        font-weight: 600;
+    }
+    
+    #googleSignIn{
+        height: 40px;
+        width: 50%;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0px 0px 1px;
+        font-weight: 500;
+        color: blue;
+        background-color: transparent;
+        transition: 0.3s;
+    }
+    
+    #googleSignIn:hover{
+        color: blue;
+        background-color: hsl(240, 100%, 90%);
+    }
+    
+    #googleSignIn:active{
+        color: white;
+        background-color: black;
+    }
+    
+    .NewAct-button {
+        position: fixed;
+        bottom: 60px;
+        left: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 40px;
+        border: 1px solid blue;
+        border-radius: 5px;
+        font-weight: 500;
+        color: black;
+        background-color: white;
+    }
+    
+    .NewAct-button:hover{
+        border-radius: 10px;
+        font-weight: 500;
+        background-color: hsl(0, 0%, 90%);
+    }
+    
+    .NewAct-button:active{
+        color: white;
+        background-color: black;
+    }
+    
+    .TVC{
+        text-align: center;
+        font-weight: bold;
+        color: #2434c7;
+        position: fixed;
+        bottom: 0px;
+        left: 44%;
+    }
+    
+}

@@ -1,0 +1,171 @@
+body{
+    color: black;
+    background-color:   #f0f3f7;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.searchMember{
+    padding: 0px 20px;
+}
+
+.member-list {
+    margin-top: 20px;
+}
+
+.member {
+    background: #e9ecef;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.member{
+    text-align: center;
+    background-color: antiquewhite;
+    box-shadow: 0px 0px 5px black;
+}
+
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+#homeNav{
+    text-decoration: none;
+    color: black;
+}
+
+#bibleLink{
+    text-decoration: none;
+    color: black;
+}
+
+#recordsPage{
+    color: rgb(91, 40, 8);
+    text-decoration: underline;
+}
+
+#accountPage{
+    color: black;
+    text-decoration: none;
+}
+
+.nav-bar2 {
+    display: flex;
+    color: black;
+    background-color: #a3b0e3;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0px 0px 5px;
+    width: 100%;
+    height: 6%;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+    padding: px;
+}
+
+@media (max-width: 480px) {
+
+    body{
+        color: black;
+        background: blue;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    h1 {
+        margin-top: 20px;
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .searchMember{
+        padding: 0px 10px;
+    }
+    
+    
+    .member-list {
+        margin-top: 20px;
+    }
+    
+    .member {
+        background: #e9ecef;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    
+    .member{
+        text-align: center;
+        background-color: antiquewhite;
+        box-shadow: 0px 0px 5px black;
+    }
+    
+    
+    a{
+        color: black;
+        text-decoration: none;
+    }
+    
+    #homeNav{
+        text-decoration: none;
+        color: black;
+    }
+    
+    #bibleLink{
+        text-decoration: none;
+        color: black;
+    }
+    
+    #recordsPage{
+        color: rgb(91, 40, 8);
+        text-decoration: underline;
+    }
+    
+    #accountPage{
+        color: black;
+        text-decoration: none;
+    }
+    
+    .nav-bar2 {
+        display: flex;
+        color: black;
+        background-color: #a3b0e3;
+        justify-content: space-evenly;
+        align-items: center;
+        box-shadow: 0px 0px 5px;
+        width: 100%;
+        height: 6%;
+        text-align: center;
+        position: fixed;
+        bottom: 0px;
+        padding: px;
+    }
+}
