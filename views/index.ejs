@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.00" />
     <title>TVC</title>
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="icon" href="/assets/logo.png" type="image/x-icon">
 </head>
 
 <body>
@@ -24,11 +25,10 @@
             <input type="email" name="username" placeholder="Enter your email" id="userName" class="fields" required>
             <input type="password" name="password" placeholder="Password" id="passWord" class="fields" required>
             <input type="submit" value="Log in" id="logIn">
+            <% if(locals.error){ %> 
+                <p id="error">⚠ <%= error %></p>
+            <% } %>
         </form>
-
-       <% if(locals.error){ %> 
-            <p><%= error %></p>
-        <% } %>
 
         <p>Or</p>
 

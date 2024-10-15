@@ -63,7 +63,15 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.get("/",  (req, res) => {
+  if(req.user){
+    if(req.user.error){
+      res.render("index.ejs", {error: req.user.error});
+    }
+  }
+  else{
     res.render("index.ejs");
+  }
+
   });
 
 app.get("/register", (req, res) => {
@@ -75,14 +83,16 @@ app.get("/register", (req, res) => {
 // })
 
 app.get("/dashboard", (req, res) => {
-
   if(req.isAuthenticated()){
-    res.render("dashboard.ejs", {
-      user: req.user.username, 
-      picture: req.user.picture,
-    }); 
-    console.log(req.user.picture);
-    console.log(req.user);
+    if(req.user.error){
+      res.redirect("/");
+    }
+    else{
+      res.render("dashboard.ejs", {
+        user: req.user.username, 
+        picture: req.user.picture,
+      }); 
+    }
   }
   else{
     res.redirect("/");
@@ -253,7 +263,7 @@ passport.use("local",
       console.log(response.data)
       const error = response.data.error
       if(error){
-       return cb(new Error(error), true);
+         return cb(null, {error: error,});
       }
       else{
         return cb(null, user)

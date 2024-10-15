@@ -72,6 +72,10 @@ p{
     font-weight: 600;
 }
 
+#error{
+    color: red;
+}
+
 #googleSignIn{
     height: 40px;
     width: 40%;
@@ -204,6 +208,10 @@ p{
         color:black;
         font-weight: 600;
     }
+
+    #error{
+        color: red;
+    }    
     
     #googleSignIn{
         height: 40px;
