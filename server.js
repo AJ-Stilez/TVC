@@ -253,7 +253,7 @@ passport.use("local",
       console.log(response.data)
       const error = response.data.error
       if(error){
-       return cb(new Error(error));
+       return cb(new Error(error), true);
       }
       else{
         return cb(null, user)
