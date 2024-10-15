@@ -219,6 +219,7 @@ app.post("/register", async (req, res) => {
       error: error,
       email: email,
     } = response.data;
+    console.log(response);
     const errorMessage = `${error}:  "${email}"`;
     if(error && email){
       res.render("register.ejs", {error: errorMessage});
@@ -269,7 +270,7 @@ passport.use("google",
   new GoogleStrategy({
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    callbackURL: "https://tvc.onrender.com/auth/google/dashboard",
+    callbackURL: process.env.CALLBACKURL,
     userProfileURL: process.env.USERPROFILEURL,
   }, async (accessToken, refreshToken, profile, cb) => {
     try{
