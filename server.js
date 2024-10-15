@@ -261,7 +261,7 @@ passport.use("local",
       
     } 
     catch(error){
-      return cb(error.messsage, true);
+      return cb(new Error(error.message || 'An error occurred during authentication'), false);
     }
   } )
 )
