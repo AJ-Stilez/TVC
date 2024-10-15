@@ -1,64 +1,46 @@
-<html>
-  <head>
-    <title>Records</title>
-    <link rel="stylesheet" href="/styles/records.css">
-    <link rel="icon" href="/assets/logo.png" type="image/x-icon">
-  </head>
-  <body>
-    <h1 contenteditable>Church Member Records</h1>
-
-    <div class="searchMember">
-      <h2>Search for a member</h2>
-    
-      <form action="/member" method="post">
-        <label for="name">Enter name </label>
-        <input type="text" name="name" id="name" placeholder="Enter first name" required>
-        <input type="submit" value="Get member record">
-      </form>
-  
-  
-       <% if(locals.member){ %>
-        <div class="member"> 
-          <h3>Name: <%= member.name.lastname %> <%= member.name.middlename %>  <%= member.name.firstname %></h3>
-          <p>Email address: <%= member.email %></p>
-          <p>Phone number: <%= member.phone %></p>
-          <p>Years in church: <%= member.years %></p>
-          <p>Position in church: <%= member.position %></p>
-        </div>
-       <% } else if(locals.error){%> 
-        <div class="member">
-          <h2><%= error %></h2>
-        </div>
-       <% } %>
-    </div>
-
-    <div class="nav-bar2">
-      <a href="/dashboard" id="homeNav"><p> Home </p></a>
-      <a href="/bible" id="bibleLink"><p> Bible </p></a>
-      <a href="/plans"><p id="plansPage"> Plans </p></a>
-      <a href="#" id="recordsPage"><p> Records </p></a>
-      <a href="/account" id="accountPage"><p> My account </p></a>
-  </div>
-
-  </body>
-</html>
-<!-- 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/records.css">
-    <title>Church Member Records</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Records</title>
+  <link rel="stylesheet" href="/styles/records.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Church Member Records</h1>
-        <div id="memberList" class="member-list"></div>
-        <button id="addMemberBtn">Add Member</button>
-    </div>
+  <h1 contenteditable>Church Member Account</h1>
 
-    <script src="/script/records.js"></script>
+  <div class="searchMember">
+    <h2>Search for a member</h2>
+  
+    <form action="/member" method="post">
+      <label for="name">Enter name </label>
+      <input type="text" name="name" id="name" placeholder="Enter first name" required>
+      <input type="submit" value="Get record" id="getMemberBtn">
+    </form>
+
+
+     <% if(locals.member){ %>
+      <div class="member"> 
+        <h3>Name: <%= member.name.lastname %> <%= member.name.middlename %>  <%= member.name.firstname %></h3>
+        <p>Email address: <%= member.email %></p>
+        <p>Phone number: <%= member.phone %></p>
+        <p>Years in church: <%= member.years %></p>
+        <p>Position in church: <%= member.position %></p>
+      </div>
+     <% } else if(locals.error){%> 
+      <div class="member">
+        <h2><%= error %></h2>
+      </div>
+     <% } %>
+  </div>
+
+  <div class="nav-bar2">
+    <a href="/dashboard" id="homeNav"><p> Home </p></a>
+    <a href="/bible" id="bibleLink"><p> Bible </p></a>
+    <a href="/plans"><p id="plansPage"> Plans </p></a>
+    <a href="#" id="recordsPage"><p> Records </p></a>
+    <a href="/account" id="accountPage"><p> My account </p></a>
+</div>
+
 </body>
-</html>  -->
+</html>

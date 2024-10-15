@@ -1,94 +1,8 @@
-body{
-    color: black;
-    background-color:   #f0f3f7;
-    margin: 0px;
-    padding: 0px;
-}
-
-
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    background: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.searchMember{
-    padding: 0px 20px;
-}
-
-.member-list {
-    margin-top: 20px;
-}
-
-.member {
-    background: #e9ecef;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.member{
-    text-align: center;
-    background-color: antiquewhite;
-    box-shadow: 0px 0px 5px black;
-}
-
-
-a{
-    color: black;
-    text-decoration: none;
-}
-
-#homeNav{
-    text-decoration: none;
-    color: black;
-}
-
-#bibleLink{
-    text-decoration: none;
-    color: black;
-}
-
-#recordsPage{
-    color: rgb(91, 40, 8);
-    text-decoration: underline;
-}
-
-#accountPage{
-    color: black;
-    text-decoration: none;
-}
-
-.nav-bar2 {
-    display: flex;
-    color: black;
-    background-color: #a3b0e3;
-    justify-content: space-evenly;
-    align-items: center;
-    box-shadow: 0px 0px 5px;
-    width: 100%;
-    height: 6%;
-    text-align: center;
-    position: fixed;
-    bottom: 0px;
-    padding: px;
-}
-
-@media (max-width: 480px) {
-
-    body{
+@media (max-width: 480px){
+    body {
         color: black;
-        background: blue;
+        background: #f0f3f7;
         margin: 0px;
-        padding: 0px;
     }
     
     .container {
@@ -102,54 +16,53 @@ a{
     
     h1 {
         margin-top: 20px;
-        font-size: 32px;
+        font-size: 26px;
         text-align: center;
     }
 
-    .searchMember{
-        padding: 0px 10px;
+    .searchMember {
+        font-size: 16px;
+        padding: 0 10px;
     }
-    
     
     .member-list {
         margin-top: 20px;
     }
     
     .member {
-        background: #e9ecef;
+        background: antiquewhite;
         padding: 10px;
         border-radius: 5px;
         margin-bottom: 10px;
-    }
-    
-    .member{
         text-align: center;
-        background-color: antiquewhite;
         box-shadow: 0px 0px 5px black;
     }
+
+    #getMemberBtn{
+        width: 80px;
+        color: white;
+        background-color: black;
+        border-radius: 5px;
+        padding: 3px 5px;
+    }
     
-    
-    a{
+    a {
         color: black;
         text-decoration: none;
     }
     
-    #homeNav{
+    #homeNav,
+    #bibleLink {
         text-decoration: none;
         color: black;
     }
     
-    #bibleLink{
-        text-decoration: none;
-        color: black;
-    }
-    
-    #recordsPage{
+    #recordsPage {
         color: rgb(91, 40, 8);
         text-decoration: underline;
     }
     
-    #accountPage{
+    #accountPage {
         color: black;
         text-decoration: none;
     }
@@ -165,7 +78,92 @@ a{
         height: 6%;
         text-align: center;
         position: fixed;
-        bottom: 0px;
-        padding: px;
+        bottom: 0;
+        padding: 0; /* Fixed padding issue */
+    }
+
+
+}
+   
+@media (min-width: 481px) {
+    body {
+        color: black;
+        background-color: #f0f3f7;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    h1 {
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    .searchMember {
+        padding: 0 20px;
+    }
+    
+    .member-list {
+        margin-top: 20px;
+    }
+    
+    .member {
+        background: antiquewhite;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        text-align: center;
+        box-shadow: 0px 0px 5px black;
+    }
+
+    #getMemberBtn{
+        color: white;
+        background-color: black;
+        border-radius: 5px;
+        padding: 3px 5px;
+    }
+    
+    a {
+        color: black;
+        text-decoration: none;
+    }
+    
+    #homeNav,
+    #bibleLink {
+        text-decoration: none;
+        color: black;
+    }
+    
+    #recordsPage {
+        color: rgb(91, 40, 8);
+        text-decoration: underline;
+    }
+    
+    #accountPage {
+        color: black;
+        text-decoration: none;
+    }
+    
+    .nav-bar2 {
+        display: flex;
+        color: black;
+        background-color: #a3b0e3;
+        justify-content: space-evenly;
+        align-items: center;
+        box-shadow: 0px 0px 5px;
+        width: 100%;
+        height: 6%;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        padding: 0;
     }
 }
