@@ -274,7 +274,6 @@ passport.use("google",
     userProfileURL: process.env.USERPROFILEURL,
   }, async (accessToken, refreshToken, profile, cb) => {
     try{
-      // console.log(profile.picture);
       const email = profile.email;
       // const response = await db.query("SELECT * FROM tvc_database WHERE email = $1",
       //   [email],
