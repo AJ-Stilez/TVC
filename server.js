@@ -17,7 +17,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const app = express();
-const port = process.env.PORT || 5353;
+const port = process.env.PORT || 4000;
 const uri = process.env.URI;
 const API_URL = process.env.TVC_DATABASE;
 const BIBLE_URL = process.env.BIBLE_API;
@@ -253,7 +253,7 @@ passport.use("local",
       console.log(response.data)
       const error = response.data.error
       if(error){
-       return cb(error);
+       return cb(new Error(error));
       }
       else{
         return cb(null, user)
