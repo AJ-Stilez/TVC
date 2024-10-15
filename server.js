@@ -63,14 +63,14 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.get("/",  (req, res) => {
-  // if(req.user){
-  //   if(req.user.error){
-  //     res.render("index.ejs", {error: req.user.error});
-  //   }
-  // }
-  // else{
+  if(req.user){
+    if(req.user.error){
+      res.render("index.ejs", {error: req.user.error});
+    }
+  }
+  else{
     res.render("index.ejs");
-  // }
+  }
 
   });
 
