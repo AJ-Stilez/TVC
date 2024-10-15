@@ -270,7 +270,7 @@ passport.use("google",
   new GoogleStrategy({
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    callbackURL: process.env.CALLBACKURL,
+    callbackURL: process.env.CALLBACKURL || "https://tvc.onrender.com/auth/google/dashboard",
     userProfileURL: process.env.USERPROFILEURL,
   }, async (accessToken, refreshToken, profile, cb) => {
     try{
