@@ -82,9 +82,7 @@ const sendLoginAlert = (to, username) => {
     text: `Dear ${username},
 
             We wanted to let you know that your account was accessed successfully.
-
-            Login Details:
-
+            
             Date & Time: ${new Date().toUTCString()},
             If this was you, no further action is needed. If you didn’t log in, please secure your account 
             immediately by changing your password.
