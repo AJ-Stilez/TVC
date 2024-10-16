@@ -148,6 +148,13 @@ app.get("/",  async (req, res) => {
   else{
     error = req.user.error;
   }
+  const response = await fetch('https://ipinfo.io/json');
+  const data = await response.json();
+  const ipAddress = data.ip;
+  console.log(ipAddress);
+  const result = await fetch(`http://ip-api.com/json/${ipAddress}`);
+  const location = await result.json();
+  console.log(location)
     res.render("index.ejs", {error: error});
 });
 
@@ -165,9 +172,9 @@ app.get("/dashboard", async (req, res) => {
       res.render("dashboard.ejs", {
         user: req.user.username, 
         picture: req.user.picture,
-      }); 
-      
-    const response = await fetch('https://api.ipify.org?format=json');
+      });
+    // const response = await fetch('https://api.ipify.org?format=json');
+    const response = await fetch('https://ipinfo.io/json');
     const data = await response.json();
     const ipAddress = data.ip;
     const result = await fetch(`http://ip-api.com/json/${ipAddress}`);
@@ -403,6 +410,7 @@ passport.deserializeUser((user, cb) => {
   cb(null, user);
 })
 
-app.listen(port, () => {
+app.listen(port, "0.0.0.0", () => {
   console.log(`Server started running on port ${port}`);
 })
+// 102.89.46.128
