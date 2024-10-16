@@ -148,13 +148,6 @@ app.get("/",  async (req, res) => {
   else{
     error = req.user.error;
   }
-  const response = await fetch('https://ipinfo.io/json');
-  const data = await response.json();
-  const ipAddress = data.ip;
-  console.log(ipAddress);
-  const result = await fetch(`http://ip-api.com/json/${ipAddress}`);
-  const location = await result.json();
-  console.log(location)
     res.render("index.ejs", {error: error});
 });
 
