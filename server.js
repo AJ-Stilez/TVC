@@ -98,7 +98,7 @@ app.get("/dashboard", (req, res) => {
     res.redirect("/");
   }
   });
-
+  
 app.get(
   "/auth/google",
   passport.authenticate("google", {
