@@ -31,10 +31,10 @@ app.use(express.json());
 
 
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  service: process.env.TRANSPORTER_SERVICE,
   auth: {
-    user: "adenusijoseph0@gmail.com",
-    pass: "qjyywxtmuwpyaboz"
+    user: process.env.TRANSPORTER_USER,
+    pass: process.env.TRANSPORTER_PASS,
   }
 })
 
@@ -82,7 +82,7 @@ const sendLoginAlert = (to, username) => {
     text: `Dear ${username},
 
             We wanted to let you know that your account was accessed successfully.
-            
+
             Date & Time: ${new Date().toUTCString()},
             If this was you, no further action is needed. If you didn’t log in, please secure your account 
             immediately by changing your password.
