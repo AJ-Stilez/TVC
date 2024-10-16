@@ -73,7 +73,7 @@ const sendWelcomeEmail = (to, username) => {
   })
 }
 
-const sendLoginAlert = (to, username, location) => {
+const sendLoginAlert = (to, username) => {
 
   const mailOptions = {
     from: "kayskidadenusi@gmail.com",
@@ -86,7 +86,6 @@ const sendLoginAlert = (to, username, location) => {
             Login Details:
 
             Date & Time: ${new Date().toUTCString()},
-            Location: Lat: ${location.lat}, Lon: ${location.lon}, Region Name: ${location.regionName}, City: ${location.city}., Country: ${location.country}
             If this was you, no further action is needed. If you didn’t log in, please secure your account immediately by changing your password.
 
             For assistance, contact us at tvc@gmail.com.
@@ -174,13 +173,13 @@ app.get("/dashboard", async (req, res) => {
         picture: req.user.picture,
       });
     // const response = await fetch('https://api.ipify.org?format=json');
-    const response = await fetch('https://ipinfo.io/json');
-    const data = await response.json();
-    const ipAddress = data.ip;
-    const result = await fetch(`http://ip-api.com/json/${ipAddress}`);
-    const location = await result.json();
-    
-      sendLoginAlert(req.user.email, req.user.username, location);
+    // const response = await fetch('https://ipinfo.io/json');
+    // const data = await response.json();
+    // const ipAddress = data.ip;
+    // const result = await fetch(`http://ip-api.com/json/${ipAddress}`);
+    // const location = await result.json();
+
+      sendLoginAlert(req.user.email, req.user.username);
     }
   }
   else{
