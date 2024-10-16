@@ -8,6 +8,7 @@ import { Strategy } from "passport-local"
 import GoogleStrategy from 'passport-google-oauth2'
 import session from "express-session";
 import env from "dotenv";
+import nodemailer from "nodemailer";
 
 //Please work;
 
@@ -25,6 +26,83 @@ const BIBLE_URL = process.env.BIBLE_API;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use(express.json());
+
+// const welcomeEmail = ;
+
+
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: "adenusijoseph0@gmail.com",
+    pass: "qjyywxtmuwpyaboz"
+  }
+})
+
+const sendWelcomeEmail = (to, username) => {
+
+  const mailOptions = {
+    from: "kayskidadenusi@gmail.com",
+    to: to,
+    subject: "Welcome to TVC",
+    text: `Dear ${username},
+
+            Welcome to the TVC family! We’re excited to have you with us.
+
+            With the TVC app, you can:
+
+            - Access weekly sermons
+            - Stay updated on events
+            - Share prayer requests
+            - Explore resources
+
+            If you have any questions, reach out at tvc@gmail.com or visit https://tvc.onrender.com. 
+
+            We look forward to growing together!
+
+            Blessings,  
+            TVC admininstration,  
+            TVC.
+            `,
+      }
+
+  transporter.sendMail(mailOptions, (error, info) => {
+    if(error){
+      return console.log(error);
+    }
+    console.log(`Email sent: ${info.response}`);
+  })
+}
+
+const sendLoginAlert = (to, username, location) => {
+
+  const mailOptions = {
+    from: "kayskidadenusi@gmail.com",
+    to: to,
+    subject: "Login Alert",
+    text: `Dear ${username},
+
+            We wanted to let you know that your account was accessed successfully.
+
+            Login Details:
+
+            Date & Time: ${new Date().toUTCString()},
+            Location: Lat: ${location.lat}, Lon: ${location.lon}, Region Name: ${location.regionName}, City: ${location.city}., Country: ${location.country}
+            If this was you, no further action is needed. If you didn’t log in, please secure your account immediately by changing your password.
+
+            For assistance, contact us at tvc@gmail.com.
+
+            Stay safe,
+            TVC admin,
+            TVC`,
+      }
+
+  transporter.sendMail(mailOptions, (error, info) => {
+    if(error){
+      return console.log(error);
+    }
+    console.log(`Email sent: ${info.response}`);
+  })
+}
 
 
 mongoose.connect(uri)
@@ -62,7 +140,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.get("/",  (req, res) => {
+app.get("/",  async (req, res) => {
   let error;
   if(!req.user){
     error = ""
@@ -70,18 +148,15 @@ app.get("/",  (req, res) => {
   else{
     error = req.user.error;
   }
-      res.render("index.ejs", {error: error});
-  });
+    res.render("index.ejs", {error: error});
+});
 
 app.get("/register", (req, res) => {
   res.render("register.ejs");
-})
+  sendWelcomeEmail(req.user.email, req.user.username);
+});
 
-// app.get("/login", (req, res) => {
-//   res.render("index.ejs", {error: "Incorrect Username or Password"});
-// })
-
-app.get("/dashboard", (req, res) => {
+app.get("/dashboard", async (req, res) => {
   if(req.isAuthenticated()){
     if(req.user.error){
       res.redirect("/");
@@ -91,6 +166,14 @@ app.get("/dashboard", (req, res) => {
         user: req.user.username, 
         picture: req.user.picture,
       }); 
+      
+    const response = await fetch('https://api.ipify.org?format=json');
+    const data = await response.json();
+    const ipAddress = data.ip;
+    const result = await fetch(`http://ip-api.com/json/${ipAddress}`);
+    const location = await result.json();
+    
+      sendLoginAlert(req.user.email, req.user.username, location);
     }
   }
   else{

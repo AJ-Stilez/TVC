@@ -6,6 +6,10 @@ body {
     text-align: center;
 }
 
+#triggerModeLabel{
+    color: black;
+}
+
 .language {
     text-align: center;
     margin-top: 1%;
@@ -16,7 +20,7 @@ h1{
     color: #2434c7;
     text-shadow: 0px 0px 5px #611114;
     text-align: center;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 .input-fields {
@@ -141,6 +145,10 @@ p{
         padding: 0px;
         color: #fff;
         text-align: center;
+    }
+
+    #triggerModeLabel{
+        color: black;
     }
     
     .language {
@@ -272,3 +280,306 @@ p{
     }
     
 }
+
+.darkMode{
+    body {
+        background-color: #121212; /* Dark background */
+        margin: 0px;
+        padding: 0px;
+        color: #e0e0e0; /* Light text */
+        text-align: center;
+        transition: background-color 0.5s ease, color 0.5s ease; /* Transition for body */
+    }
+    body {
+        background-color: #121212; /* Dark background */
+        margin: 0px;
+        padding: 0px;
+        color: #e0e0e0; /* Light text */
+        text-align: center;
+        transition: background-color 1s ease, color 1s ease; /* Transition for body */
+    }
+    
+    #triggerModeLabel {
+        color: white;
+        transition: color 1s ease; /* Transition for trigger mode label */
+    }
+    
+    .language {
+        text-align: center;
+        margin-top: 1%;
+    }
+    
+    h1 {
+        font-size: 50px;
+        color: #bb86fc; /* Lighter purple */
+        text-shadow: 0px 0px 5px #3700b3; /* Darker shadow */
+        text-align: center;
+        margin-top: 5%;
+        transition: color 1s ease, text-shadow 1s ease; /* Transition for h1 */
+    }
+    
+    .input-fields {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .fields {
+        font-size: 16px;
+        width: 40%;
+        height: 25px;
+        border: 1px solid #bb86fc; /* Light border */
+        border-radius: 5px;
+        padding: 5px;
+        margin-bottom: 15px;
+        text-align: center;
+        background-color: #1f1f1f; /* Dark input field */
+        color: #e0e0e0; /* Light text */
+        transition: background-color 1s ease, color 1s ease; /* Transition for fields */
+    }
+    
+    .fields:hover {
+        background-color: #333; /* Dark hover */
+    }
+    
+    .fields:not(:placeholder-shown) {
+        background-color: #444; /* Darker input when filled */
+    }
+    
+    #logIn {
+        width: 30%;
+        height: 35px;
+        border-color: #bb86fc; /* Light border */
+        border-radius: 10px;
+        background-color: #6200ea; /* Primary button color */
+        color: white;
+        margin-top: 20px;
+        transition: background-color 1s ease, color 1s ease; /* Transition for logIn */
+    }
+    
+    #logIn:hover {
+        background-color: #7c4dff; /* Lighter button on hover */
+    }
+    
+    #logIn:active {
+        background-color: #3700b3; /* Darker on active */
+    }
+    
+    p {
+        color: #e0e0e0; /* Light text */
+        font-weight: 600;
+        transition: color 1s ease; /* Transition for paragraph */
+    }
+    
+    #error {
+        color: #ff5252; /* Error color */
+        transition: color 1s ease; /* Transition for error */
+    }
+    
+    #googleSignIn {
+        height: 40px;
+        width: 40%;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0px 0px 1px #bb86fc; /* Light shadow */
+        font-weight: 500;
+        color: #bb86fc; /* Light text */
+        background-color: transparent;
+        transition: background-color 1s ease, color 1s ease; /* Transition for googleSignIn */
+    }
+    
+    #googleSignIn:hover {
+        background-color: #333; /* Dark hover */
+    }
+    
+    #googleSignIn:active {
+        color: white;
+        background-color: #3700b3; /* Dark active */
+    }
+    
+    .NewAct-button {
+        position: fixed;
+        bottom: 60px;
+        left: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        height: 40px;
+        border: 1px solid #bb86fc; /* Light border */
+        border-radius: 5px;
+        font-weight: 500;
+        color: #e0e0e0; /* Light text */
+        background-color: #1f1f1f; /* Dark background */
+        transition: background-color 1s ease, color 1s ease; /* Transition for NewAct-button */
+    }
+    
+    .NewAct-button:hover {
+        border-radius: 10px;
+        background-color: #333; /* Dark hover */
+    }
+    
+    .NewAct-button:active {
+        color: white;
+        background-color: #3700b3; /* Dark active */
+    }
+    
+    .TVC {
+        text-align: center;
+        font-weight: bold;
+        color: #bb86fc; /* Lighter purple */
+        position: fixed;
+        bottom: 0px;
+        left: 46%;
+        transition: color 1s ease; /* Transition for TVC */
+    }
+    
+    @media (max-width: 480px) {
+        body {
+            background-color: #121212; /* Dark background */
+            margin: 0px;
+            padding: 0px;
+            color: #e0e0e0; /* Light text */
+            text-align: center;
+        }
+    
+        #triggerModeLabel {
+            color: white;
+            transition: color 1s ease; /* Transition for trigger mode label */
+        }
+    
+        .language {
+            text-align: center;
+            margin-top: 1%;
+        }
+    
+        h1 {
+            font-size: 50px;
+            color: #bb86fc; /* Lighter purple */
+            text-shadow: 0px 0px 5px #3700b3; /* Darker shadow */
+            text-align: center;
+            margin-top: 30%;
+            transition: color 1s ease, text-shadow 1s ease; /* Transition for h1 */
+        }
+    
+        .input-fields {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .fields {
+            font-size: 16px;
+            width: 60%;
+            height: 25px;
+            border: 1px solid #bb86fc; /* Light border */
+            border-radius: 5px;
+            padding: 5px;
+            margin-bottom: 15px;
+            text-align: center;
+            background-color: #1f1f1f; /* Dark input field */
+            color: #e0e0e0; /* Light text */
+            transition: background-color 1s ease, color 1s ease; /* Transition for fields */
+        }
+    
+        .fields:hover {
+            background-color: #333; /* Dark hover */
+        }
+    
+        .fields:not(:placeholder-shown) {
+            background-color: #444; /* Darker input when filled */
+        }
+    
+        #logIn {
+            width: 40%;
+            height: 35px;
+            border-color: #bb86fc; /* Light border */
+            border-radius: 10px;
+            background-color: #6200ea; /* Primary button color */
+            color: white;
+            margin-top: 20px;
+            transition: background-color 1s ease, color 1s ease; /* Transition for logIn */
+        }
+    
+        #logIn:hover {
+            background-color: #7c4dff; /* Lighter button on hover */
+        }
+    
+        #logIn:active {
+            background-color: #3700b3; /* Darker on active */
+        }
+    
+        p {
+            color: #e0e0e0; /* Light text */
+            font-weight: 600;
+            transition: color 1s ease; /* Transition for paragraph */
+        }
+    
+        #error {
+            color: #ff5252; /* Error color */
+            transition: color 1s ease; /* Transition for error */
+        }
+    
+        #googleSignIn {
+            height: 40px;
+            width: 50%;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0px 0px 1px #bb86fc; /* Light shadow */
+            font-weight: 500;
+            color: #bb86fc; /* Light text */
+            background-color: transparent;
+            transition: background-color 1s ease, color 1s ease; /* Transition for googleSignIn */
+        }
+    
+        #googleSignIn:hover {
+            background-color: #333; /* Dark hover */
+        }
+    
+        #googleSignIn:active {
+            color: white;
+            background-color: #3700b3; /* Dark active */
+        }
+    
+        .NewAct-button {
+            position: fixed;
+            bottom: 60px;
+            left: 25%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: 40px;
+            border: 1px solid #bb86fc; /* Light border */
+            border-radius: 5px;
+            font-weight: 500;
+            color: #e0e0e0; /* Light text */
+            background-color: #1f1f1f; /* Dark background */
+            transition: background-color 1s ease, color 1s ease; /* Transition for NewAct-button */
+        }
+    
+        .NewAct-button:hover {
+            border-radius: 10px;
+            background-color: #333; /* Dark hover */
+        }
+    
+        .NewAct-button:active {
+            color: white;
+            background-color: #3700b3; /* Dark active */
+        }
+    
+        .TVC {
+            text-align: center;
+            font-weight: bold;
+            color: #bb86fc; /* Lighter purple */
+            position: fixed;
+            bottom: 0px;
+            left: 44%;
+            transition: color 1s ease; /* Transition for TVC */
+        }    
+        
+    }
+}
+
