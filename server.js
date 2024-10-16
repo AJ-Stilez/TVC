@@ -86,7 +86,8 @@ const sendLoginAlert = (to, username) => {
             Login Details:
 
             Date & Time: ${new Date().toUTCString()},
-            If this was you, no further action is needed. If you didn’t log in, please secure your account immediately by changing your password.
+            If this was you, no further action is needed. If you didn’t log in, please secure your account 
+            immediately by changing your password.
 
             For assistance, contact us at tvc@gmail.com.
 
