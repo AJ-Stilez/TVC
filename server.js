@@ -63,15 +63,14 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.get("/",  (req, res) => {
-  if(req.user){
-    if(req.user.error){
-      res.render("index.ejs", {error: req.user.error});
-    }
+  let error;
+  if(!req.user){
+    error = ""
   }
   else{
-    res.render("index.ejs");
+    error = req.user.error;
   }
-
+      res.render("index.ejs", {error: error});
   });
 
 app.get("/register", (req, res) => {
@@ -98,7 +97,7 @@ app.get("/dashboard", (req, res) => {
     res.redirect("/");
   }
   });
-  
+
 app.get(
   "/auth/google",
   passport.authenticate("google", {
