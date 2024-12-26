@@ -9,9 +9,8 @@ import GoogleStrategy from 'passport-google-oauth2'
 import session from "express-session";
 import env from "dotenv";
 import nodemailer from "nodemailer";
-
+import cors from "cors";
 //Please work;
-
 env.config();
 
 const __filename = fileURLToPath(import.meta.url);
@@ -26,6 +25,7 @@ const BIBLE_URL = process.env.BIBLE_API;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use(express.json());
+app.use(cors());
 
 // const welcomeEmail = ;
 
